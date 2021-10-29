@@ -28,6 +28,11 @@ body h1 {
   letter-spacing: 40px;
 }
 
+.copy {
+  color: #1d1d1d;
+  opacity: 0.3;
+}
+
 .body {
   background-color: rgb(213, 213, 213);
   height: 500px;
