@@ -44,7 +44,7 @@ body h1 {
   padding-top: 20px;
   transition: all ease 1.4s;
   box-shadow: inset 20px -20px 40px #858585, inset -20px 20px 40px #ffffff;
-  transform: rotate(-10deg) skewX(5deg) translate(0, 0);
+  transform: rotate(-5deg) skewX(5deg) translate(0, 0);
 }
 
 .body:before {
@@ -153,10 +153,10 @@ body h1 {
     translateZ(0px);
 }
 
-.layers:hover .cover {
+/* .layers:hover .cover {
   transform: perspective(1000px) rotateX(5deg) rotateY(0deg) rotateZ(0deg)
     translateZ(150px);
-}
+} */
 
 .layers:hover .buttons {
   transform: perspective(1000px) rotateX(5deg) rotateY(0deg) rotateZ(0deg)
@@ -196,10 +196,11 @@ body h1 {
     transform: rotate(360deg);
   }
 }
-.play {
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
+
+.body:hover .play {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
   animation: rotating 5s linear infinite;
 }
