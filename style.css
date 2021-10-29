@@ -150,13 +150,8 @@ body h1 {
 
 .layers:hover .layer {
   transform: perspective(700px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
-    translateZ(0px);
+    translateY(-20px) translateZ(0px);
 }
-
-/* .layers:hover .cover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(0deg) rotateZ(0deg)
-    translateZ(150px);
-} */
 
 .layers:hover .buttons {
   transform: perspective(1000px) rotateX(5deg) rotateY(0deg) rotateZ(0deg)
