@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+body h1 {
+  font-size: 5rem;
+  position: absolute;
+  left: 35px;
+  opacity: 0.5;
+  letter-spacing: 40px;
+}
+
+.body {
+  background-color: rgb(213, 213, 213);
+  height: 500px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  transition: all ease 1.4s;
+  box-shadow: inset 20px -20px 40px #858585, inset -20px 20px 40px #ffffff;
+  transform: rotate(-10deg) skewX(5deg) translate(0, 0);
+}
+
+.body:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewY(-45deg);
+  transition: all ease 1.4s;
+  -webkit-transition: all ease 1.4s;
+  -moz-transition: all ease 1.4s;
+  -ms-transition: all ease 1.4s;
+  -o-transition: all ease 1.4s;
+  opacity: 0.8;
+  box-shadow: inset -20px 20px 32px #9a9a9a, inset 20px -20px 32px #c8c8c8;
+}
+.body:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewX(-45deg);
+  transition: all ease 1.4s;
+  -webkit-transition: all ease 1.4s;
+  -moz-transition: all ease 1.4s;
+  -ms-transition: all ease 1.4s;
+  -o-transition: all ease 1.4s;
+  opacity: 0.8;
+  box-shadow: inset 20px 20px 32px #9a9a9a, inset -20px -20px 32px #c8c8c8;
+}
+
+.body .cover {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 0.6;
+  background: url("cover.png");
+  background-size: cover;
+  box-shadow: inset 0 0 10px #43434397;
+  transition: all ease 1.4s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 10px #1d1d1d;
+}
+
+.buttons {
+  margin-bottom: 10px;
+  /* background-color: rgb(213, 198, 227); */
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50%;
+  background: #2d2d2d;
+  box-shadow: inset -20px 20px 30px #1d1d1d, inset 20px -20px 30px #3d3d3d,
+    0 0 10px #1d1d1d;
+  transition: all ease 1.4s;
+  transform-style: preserve-3d;
+}
+
+.buttons .controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all ease 1.4s;
+  transform-style: preserve-3d;
+}
+
+.controls .play {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  width: 65px;
+  background-color: brown;
+  border-radius: 100px;
+}
+
+.controls .play,
+.controls .previous,
+.controls .next,
+.play-icon {
+  transition: all ease 1.4s;
+  transform-style: preserve-3d;
+}
+
+.menu,
+.mode {
+  opacity: 0.8;
+  transition: all ease 1.4s;
+  transform-style: preserve-3d;
+}
+
+.layers:hover .layer {
+  transform: perspective(700px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateZ(0px);
+}
+
+.layers:hover .cover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(0deg) rotateZ(0deg)
+    translateZ(150px);
+}
+
+.layers:hover .buttons {
+  transform: perspective(1000px) rotateX(5deg) rotateY(0deg) rotateZ(0deg)
+    translateZ(200px);
+}
+
+.buttons:hover .play {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translateZ(100px);
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.play {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 5s linear infinite;
+}
